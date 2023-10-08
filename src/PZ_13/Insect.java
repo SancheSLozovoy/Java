@@ -1,3 +1,5 @@
+package PZ_13;
+
 class Insect extends Animal{
     private int wingCount;
     private boolean likeJesus;

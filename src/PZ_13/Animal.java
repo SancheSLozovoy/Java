@@ -1,3 +1,5 @@
+package PZ_13;
+
 class Animal{
     public String name;
     public String type;

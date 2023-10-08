@@ -1,3 +1,5 @@
+package PZ_13;
+
 class Bird extends Animal{
     private String area;
     private boolean winterFly;

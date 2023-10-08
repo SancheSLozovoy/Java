@@ -1,3 +1,5 @@
+package PZ_13;
+
 class Fish extends Animal{
     private String squamo;
     private boolean upStreamSwim;
@@ -8,6 +10,8 @@ class Fish extends Animal{
     }
     public Fish(String squamo, boolean upStreamSwim, String type, String name, int age, double weight, boolean isWalk, boolean isFly){
         super(type, name, age, weight, true, isWalk, isFly);
+        this.squamo = squamo;
+        this.upStreamSwim = upStreamSwim;
     }
     public void bul_bul(){
         System.out.println("Bul-bul\n");
