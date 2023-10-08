@@ -6,11 +6,11 @@ class Fish extends Animal{
     public Fish(){
         super();
     }
-    public Fish(String squamo, boolean upStreamSwim, String type, String name, int age, double weight, boolean isSwim, boolean isWalk, boolean isFly){
-        super(type, name, age, weight, isSwim = true, isWalk, isFly);
+    public Fish(String squamo, boolean upStreamSwim, String type, String name, int age, double weight, boolean isWalk, boolean isFly){
+        super(type, name, age, weight, true, isWalk, isFly);
     }
     public void bul_bul(){
-        System.out.println("Bul-bul");
+        System.out.println("Bul-bul\n");
     }
 
     public String getSquamo() {
@@ -27,5 +27,12 @@ class Fish extends Animal{
 
     public void setUpStreamSwim(boolean upStreamSwim) {
         this.upStreamSwim = upStreamSwim;
+    }
+
+    public void display() {
+        System.out.println("I am a Fish");
+        super.display();
+        System.out.println("Squamo type: " + getSquamo());
+        System.out.println("Upstream swim ability: " + isUpStreamSwim());
     }
 }

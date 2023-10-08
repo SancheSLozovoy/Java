@@ -26,7 +26,7 @@ class Animal{
         this.isSwim = false;
         this.isWalk = false;
     }
-    public Animal(String type, String name, int age, double weight, boolean isSwim, boolean isWalk, boolean isFly){
+    public Animal(String type, String name, int age, double weight, boolean isSwim, boolean isWalk, boolean isFly) {
         this.type = type;
         this.name = name;
         this.age = age;

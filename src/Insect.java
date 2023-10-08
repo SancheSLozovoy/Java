@@ -6,8 +6,8 @@ class Insect extends Animal{
         super();
     }
 
-    public Insect(String area, boolean upStreamSwim, String type, String name, int age, double weight, boolean isSwim, boolean isWalk, boolean isFly){
-        super(type, name, age, weight, isSwim, isWalk=true, isFly);
+    public Insect(int wingCount, boolean likeJesus, String type, String name, int age, double weight, boolean isSwim, boolean isFly){
+        super(type, name, age, weight, isSwim, true, isFly);
     }
     public void ggg(){
         System.out.println("Ggggg");
@@ -27,5 +27,12 @@ class Insect extends Animal{
 
     public void setLikeJesus(boolean likeJesus) {
         this.likeJesus = likeJesus;
+    }
+
+    public void display() {
+        System.out.println("I am an Insect");
+        super.display();
+        System.out.println("Can walk: " + getWalk());
+        System.out.println("My wing count: " + getWingCount());
     }
 }
