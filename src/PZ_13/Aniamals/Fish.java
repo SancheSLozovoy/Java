@@ -1,4 +1,4 @@
-package PZ_13;
+package PZ_13.Aniamals;
 
 class Fish extends Animal{
     private String squamo;
@@ -34,7 +34,7 @@ class Fish extends Animal{
     }
 
     public void display() {
-        System.out.println("I am a Fish");
+        System.out.println("I am a "+ getClass().getName());
         super.display();
         System.out.println("Squamo type: " + getSquamo());
         System.out.println("Upstream swim ability: " + isUpStreamSwim());
