@@ -1,4 +1,4 @@
-package PZ_13;
+package PZ_13.Aniamals;
 
 class Insect extends Animal{
     private int wingCount;
@@ -32,7 +32,7 @@ class Insect extends Animal{
     }
 
     public void display() {
-        System.out.println("I am an Insect");
+        System.out.println("I am an "+ getClass().getName());
         super.display();
         System.out.println("Can walk: " + getWalk());
         System.out.println("My wing count: " + getWingCount());

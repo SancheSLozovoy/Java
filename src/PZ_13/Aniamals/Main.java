@@ -1,8 +1,8 @@
-package PZ_13;
+package PZ_13.Aniamals;
 
 public class Main {
     public static void main(String[] args) {
-//        PZ_13.Animal tiger = new PZ_13.Animal();
+//        PZ_13.Aniamals.Animal tiger = new PZ_13.Aniamals.Animal();
 //        tiger.type = "Тигр";
 //        tiger.name = "Мага";
 //        tiger.age  = 15;
@@ -15,7 +15,7 @@ public class Main {
 //        tiger.display();
 //
 //
-//        PZ_13.Animal sparrow = new PZ_13.Animal();
+//        PZ_13.Aniamals.Animal sparrow = new PZ_13.Aniamals.Animal();
 //        sparrow.type = "Птица";
 //        sparrow.name = "чебурек";
 //        sparrow.age = 3;
@@ -28,7 +28,7 @@ public class Main {
 //        sparrow.display();
 //
 //
-//        PZ_13.Animal cat = new PZ_13.Animal("Кот", "Мурка", 2, 4, true, true, false);
+//        PZ_13.Aniamals.Animal cat = new PZ_13.Aniamals.Animal("Кот", "Мурка", 2, 4, true, true, false);
 //        cat.holiday(2);
 //        cat.rename("Барсик");
 //        cat.display();

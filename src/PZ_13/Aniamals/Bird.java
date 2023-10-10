@@ -1,4 +1,4 @@
-package PZ_13;
+package PZ_13.Aniamals;
 
 class Bird extends Animal{
     private String area;
@@ -34,7 +34,7 @@ class Bird extends Animal{
     }
 
     public void display() {
-        System.out.println("I am a Bird");
+        System.out.println("I am a "+getClass().getName());
         super.display();
         System.out.println("Area: " + getArea());
         System.out.println("Can fly in winter: " + isWinterFly());

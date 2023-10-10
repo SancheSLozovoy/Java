@@ -1,4 +1,4 @@
-package PZ_13;
+package PZ_13.Aniamals;
 
 class Animal{
     public String name;
