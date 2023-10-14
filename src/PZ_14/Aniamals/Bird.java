@@ -4,12 +4,16 @@ class Bird extends Animal {
     private String area;
     private boolean winterFly;
 
-    public Bird(){
-        super();
+    {
+        area = "NONE";
+        winterFly = false;
     }
+//    public Bird(){
+//        super();
+//    }
 
     public Bird(String area, boolean winterFly, String type, String name, int age, double weight, boolean isSwim, boolean isWalk) {
-        super("Птица", "Анатолий", age, weight, isSwim, isWalk, true);
+        super(type, name, age, weight, isSwim, isWalk, true);
         this.area = area;
         this.winterFly = winterFly;
     }
@@ -39,4 +43,5 @@ class Bird extends Animal {
         System.out.println("Area: " + getArea());
         System.out.println("Can fly in winter: " + isWinterFly());
     }
+
 }

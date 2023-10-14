@@ -1,15 +1,19 @@
 package PZ_14.Aniamals;
 
-class Fish extends Animal {
+final class Fish extends Animal {
     private String squamo;
     private boolean upStreamSwim;
 
-
-    public Fish(){
-        super();
+    {
+        squamo = "None";
+        upStreamSwim = false;
     }
+
+//    public Fish(){
+//        super();
+//    }
     public Fish(String squamo, boolean upStreamSwim, String type, String name, int age, double weight, boolean isWalk, boolean isFly){
-        super("Рыба", "Black God", age, weight, true, isWalk, isFly);
+        super(type, name, age, weight, true, isWalk, isFly);
         this.squamo = squamo;
         this.upStreamSwim = upStreamSwim;
     }

@@ -4,12 +4,16 @@ class Insect extends Animal {
     private int wingCount;
     private boolean likeJesus;
 
-    public Insect(){
-        super();
+    {
+        wingCount = 0;
+        likeJesus = false;
     }
+//    public Insect(){
+//        super();
+//    }
 
     public Insect(int wingCount, boolean likeJesus, String type, String name, int age, double weight, boolean isSwim, boolean isFly){
-        super("Насеокмое", "Галимый червь", age, weight, isSwim, true, isFly);
+        super(type, name, age, weight, isSwim, true, isFly);
     }
     public void ggg(){
         System.out.println("Ggggg");

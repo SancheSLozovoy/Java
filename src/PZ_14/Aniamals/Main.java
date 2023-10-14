@@ -28,7 +28,7 @@ public class Main {
 //        sparrow.display();
 //
 //
-//        PZ_13.Aniamals.Animal cat = new PZ_13.Aniamals.Animal("Кот", "Мурка", 2, 4, true, true, false);
+//        PZ_14.Aniamals.Animal cat = new PZ_14.Aniamals.Animal("Кот", "Мурка", 2, 4, true, true, false);
 //        cat.holiday(2);
 //        cat.rename("Барсик");
 //        cat.display();
@@ -39,6 +39,7 @@ public class Main {
 //        System.out.println(cat.getSwim());
 //        System.out.println(cat.getWalk());
 //        System.out.println(cat.getFly());
+//        cat.aima(4);
 
         Bird b = new Bird("На югах", true, "Птица", "Bob", 13, 3.6, false, false);
         b.display();
@@ -63,6 +64,8 @@ public class Main {
         System.out.println(i.isLikeJesus());
         i.ggg();
 
-        Animal.aima(3);
+        System.out.print(i.toString());
+
+
     }
 }

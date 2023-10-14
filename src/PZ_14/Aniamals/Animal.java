@@ -1,15 +1,20 @@
 package PZ_14.Aniamals;
 
 class Animal{
-    static String name;
-    static String type;
-    static int age;
-    static double weight;
-    static boolean isSwim;
-    static boolean isWalk;
-    static boolean isFly;
-    static String description;
-    static int counter;
+    private String name;
+    private String type;
+    private int age;
+    private double weight;
+    private boolean isSwim;
+    private boolean isWalk;
+    private boolean isFly;
+    static int count;
+    final static String description;
+
+    static{
+        count = 0;
+        description = "Пуки каки";
+    }
 
     {
         type = "NON";
@@ -20,19 +25,8 @@ class Animal{
         isSwim = false;
         isWalk = false;
     }
-    static{
-        counter = 0;
-        description = "Класс Animal с полями: type(тип животного), name(имя животного), age(возраст животного)," +
-                " weight(вес животного), isFly, isWalk, isSwim (возможность животного летать, гулять и плавать соответственно)\n";
-    }
-    public Animal(){
-        counter += 1;
-    }
-    public Animal(String type, String name){
-        counter += 1;
-        setType(type);
-        setName(name);
-    }
+
+
 
     public Animal(String type, int age){
         this.type = type;
@@ -42,6 +36,7 @@ class Animal{
         this.isFly = false;
         this.isSwim = false;
         this.isWalk = false;
+        count++;
     }
     public Animal(String type, String name, int age, double weight, boolean isSwim, boolean isWalk, boolean isFly) {
         this.type = type;
@@ -51,6 +46,13 @@ class Animal{
         this.isSwim = isSwim;
         this.isWalk = isWalk;
         this.isFly = isFly;
+        count++;
+    }
+
+    public String toString(){
+        return "Номер: "+count + "\n" + "Тип: "+type + "\n" + "Имя: "+name+"\n" + "Возраст: "+age +"\n" + "Вес: "+weight + "\n" + "Умеет летать: "+(isFly ? "Да" : "Нет") + "\n" +
+        "Умеет ходить: "+(isWalk ? "Да" : "Нет") + "\n" +
+        "Умеет плавать: "+(isSwim ? "Да" : "Нет")+"\n";
     }
 
     public String getType() {
@@ -113,12 +115,12 @@ class Animal{
     }
 
     public static void aima(int age){
-        System.out.println("How old are u ma nigga??");
+        System.out.println("How old are u ma MAN??");
         System.out.println("Im " + age);
     }
 
 
-    public void rename(String newName){
+    final public void rename(String newName){
         this.name = newName;
     }
 
