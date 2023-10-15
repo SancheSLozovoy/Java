@@ -1,10 +1,13 @@
 package PZ_14.Materials;
 
-class Ruler extends WritingMaterials {
+final class Ruler extends WritingMaterials {
     private double length1;
     private boolean wood;
 
-
+    {
+        length1 = 0.0;
+        wood = false;
+    }
     public Ruler() {
         super();
     }

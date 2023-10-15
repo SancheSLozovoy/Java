@@ -6,30 +6,55 @@ class WritingMaterials {
     private double length;
     private int price;
     private boolean draw;
+    static int count;
+    final static String description;
+
+
+    static {
+        defaultName = "No Name";
+        defaultColor = "No Color";
+        count = 0;
+        description = "Класс описывает письменные принадлежности";
+    }
+
+    private static String defaultName;
+    private static String defaultColor;
+
+    public String toString() {
+        return "Номер: " + count + "\n"
+                + "Название: " + name + "\n"
+                + "Цвет: " + color + "\n"
+                + "Длина: " + length + "\n"
+                + "Цена: " + price + "\n"
+                + "Умеет рисовать: " + (draw ? "Да" : "Нет") + "\n";
+    }
 
 
     public WritingMaterials() {
-        this.name = name;
-        this.color = color;
+        this.name = defaultName;
+        this.color = defaultColor;
         this.length = 0.0;
         this.price = 0;
         this.draw = false;
+        count++;
     }
 
     public WritingMaterials(String name, int price) {
         this.name = name;
-        this.color = "No color";
+        this.color = defaultColor;
         this.length = 0.0;
         this.price = 0;
         this.draw = false;
+        count++;
     }
 
     public WritingMaterials(int price, double length, boolean draw) {
-        this.name = "No Name";
-        this.color = "No Color";
+        this.name = defaultName;
+        this.color = defaultColor;
         this.length = length;
         this.price = price;
         this.draw = draw;
+        count++;
     }
 
     public WritingMaterials(String name, String color, double length, int price, boolean draw) {
@@ -38,6 +63,7 @@ class WritingMaterials {
         this.length = length;
         this.price = price;
         this.draw = draw;
+        count++;
     }
 
     public String getName() {
@@ -122,6 +148,11 @@ class WritingMaterials {
         } else {
             System.out.println(this.name + " не может ничего нарисовать" + "\n");
         }
+    }
+
+    // Статичный метод для получения описания класса
+    public static String getDescription() {
+        return description;
     }
 
     public void drawe(String color, int n) {

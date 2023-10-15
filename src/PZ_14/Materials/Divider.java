@@ -4,6 +4,11 @@ class Divider extends WritingMaterials {
     private String dividerType;
     private boolean metal;
 
+    {
+        dividerType = "No type";
+        metal = false;
+    }
+
 
     public Divider(){
         super();
@@ -30,7 +35,7 @@ class Divider extends WritingMaterials {
         this.metal = metal;
     }
 
-    public void draw_circle(){
+    final public void draw_circle(){
         System.out.println("Нарисован круг\n");
     }
     public void display() {

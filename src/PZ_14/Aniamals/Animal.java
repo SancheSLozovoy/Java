@@ -13,7 +13,7 @@ class Animal{
 
     static{
         count = 0;
-        description = "Пуки каки";
+        description = "класс описывает животных";
     }
 
     {

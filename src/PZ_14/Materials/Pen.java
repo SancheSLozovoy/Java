@@ -3,7 +3,10 @@ package PZ_14.Materials;
 class Pen extends WritingMaterials {
     private int countColor;
     private boolean auto;
-
+    {
+        countColor = 0;
+        auto = false;
+    }
 
 
     public Pen(){
