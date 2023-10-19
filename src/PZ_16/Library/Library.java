@@ -13,6 +13,7 @@ public class Library {
     private List<Employees> employees;
     private List<Client> clients;
 
+
     public Library(int booksCount, int emplCount, String directorName, String name){
         this.booksCount = booksCount;
         this.emplCount = emplCount;
@@ -26,10 +27,12 @@ public class Library {
 
     public void addBook(Book book){
         books.add(book);
+        booksCount++;
     }
 
     public void delBook(Book book){
         books.remove(book);
+        booksCount--;
     }
 
     public void addEmpl(Employees empl){
@@ -43,5 +46,13 @@ public class Library {
     }
     public void delClient(Client client){
         clients.remove(client);
+    }
+
+    public String getBooksCount() {
+        return "\n" + "Книг в библиотеке на данный момент " + booksCount;
+    }
+
+    public void setBooksCount(int booksCount) {
+        this.booksCount = booksCount;
     }
 }

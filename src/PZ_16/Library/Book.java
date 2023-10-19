@@ -11,7 +11,6 @@ public class Book{
         this.title = title;
     }
 
-
     public String getAuthor() {
         return author;
     }
@@ -28,11 +27,11 @@ public class Book{
         this.year = year;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+    public String getTitle(){
+        return "Название книги: " + title;
     }
 }

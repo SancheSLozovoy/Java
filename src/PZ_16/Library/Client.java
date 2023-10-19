@@ -17,6 +17,6 @@ public class Client extends Person{
    }
 
    public String getBookCount(){
-       return "Книг у посетителя: " + getsBooks.size();
+       return "\n" + "Книг у посетителя " + getFullName() + ": " + getsBooks.size();
    }
 }

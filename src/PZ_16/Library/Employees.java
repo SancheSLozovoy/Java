@@ -26,4 +26,11 @@ public class Employees extends Person{
     public void setPol(String pol) {
         this.pol = pol;
     }
+
+    public String getEmpl(){
+        return "\n" + "Работник: " + getFullName() + "\n" +
+                "Год рождения: " + getBornYear() + "\n" +
+                "Пол: " + getPol();
+    }
+
 }
