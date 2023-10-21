@@ -26,7 +26,6 @@ public class Main {
         Client siu = new Client("Cristiano", "Ronaldo");
         Client omg = new Client("Omgarbl", "Icantbelive");
         cl.addBook(book2);
-        cl.addBook(book5);
 
         siu.addBook(book6);
         siu.addBook(book8);
@@ -41,18 +40,41 @@ public class Main {
 
 
 
-        Employees Adolf = new Employees("Adolf","Sulafko", 2001, "M");
+        Employees Adolf = new Employees("Adolf","Maga", 2001, "M");
         Employees Anna = new Employees("Anna","Ten", 2004, "Ж");
         Employees Metro = new Employees("Metro","Booming", 2000, "M");
         System.out.println(Anna.getEmpl());
 
 
-        Library lb = new Library(0, 3, "Pamper P.", "Rostov cringe lib");
+        Library lb = new Library(0, 3, "Pamper P.");
+        System.out.println("\n"+lb.display());
         lb.addBook(book1);lb.addBook(book2);lb.addBook(book3);lb.addBook(book4);lb.addBook(book5);lb.addBook(book6);
         lb.addBook(book8);lb.addBook(book9);lb.addBook(book10);lb.addBook(book11);lb.addBook(book12);lb.addBook(book13);
         lb.addBook(book14);lb.addBook(book15);lb.addBook(book16);lb.addBook(book17);
         System.out.println(lb.getBooksCount());
+        lb.addEmpl(Adolf);
+        lb.addEmpl(Anna);
+        lb.addEmpl(Metro);
+
         lb.addClient(cl);
+        lb.addClient(omg);
+        lb.addClient(lol);
+        lb.addClient(siu);
+
+
+        lb.displayAvailableBook();
+
+        System.out.println("\n");
+
+        lb.issueBook("Маленький принц");
+        lb.issueBook("Маленький принц");
+        lb.ReturnBook("Маленький принц");
+        lb.ReturnBook("Маленький принц");
+
+
+        Author au = new Author("Harper", "Lee");
+        au.addBookByAuthor(book5);
+        au.displayBooksByAuthor();
 
     }
 }

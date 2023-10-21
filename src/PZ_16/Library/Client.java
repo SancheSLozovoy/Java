@@ -3,7 +3,7 @@ package PZ_16.Library;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client extends Person{
+public class Client extends Person implements LibraryClient{
     public List<Book> getsBooks;
 
 

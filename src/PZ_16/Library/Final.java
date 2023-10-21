@@ -1,5 +1,7 @@
 package PZ_16.Library;
 
-final class Final {
+    public abstract class Final {
 
-}
+        public abstract String display();
+
+    }
