@@ -25,7 +25,7 @@ public class Employees {
 
     public String display(){
         return "Имя преподвателя: " + getFullName() + "\n" +
-                "Предмет: " + getSubject();
+                "Предмет: " + getSubject() + "\n";
     }
 
 

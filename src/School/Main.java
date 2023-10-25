@@ -5,6 +5,9 @@ package School;
 public class Main {
     public static void main(String[] args){
         Employees em1 = new Employees("Дж. Джона", "Джеймесон", "Физика");
+        Employees em2 = new Employees("Мария", "Ивановна", "Математика");
+        Employees em3 = new Employees("Августина", "Магомедова", "География");
+        System.out.println(em1.display());
 
         Students st1 = new Students("Максим", "Иванов", 0);
         st1.addMark(5);
@@ -29,6 +32,8 @@ public class Main {
         System.out.println(t7b.getClassName());
         System.out.println(t7b.getSchedule());
         sc.addEmpl(em1);
+        sc.addEmpl(em2);
+        sc.addEmpl(em3);
         System.out.println(sc.display());
     }
 }
