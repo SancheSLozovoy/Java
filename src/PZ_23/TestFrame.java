@@ -24,14 +24,15 @@ public class TestFrame extends JFrame{
     }  //Этот блок начинает объявление класса TestFrame, который наследуется от класса JFrame и содержит поля textField, button1, button2 и button3, предназначенные для текстового поля и кнопок
 
     public void createGUI(){
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //выход на кнопку
 
-        JPanel panel = new JPanel();
-        panel.setLayout(new FlowLayout());
+        JPanel panel = new JPanel(); //панель для расположения элементов
+        panel.setLayout(new FlowLayout()); //устанавливаем flow layout
 
-        button1 = new JButton("Button 1");
-        button1.setActionCommand("Button 1 was pressed");
-        panel.add(button1);
+        button1 = new JButton("Button 1"); //объявляем кнопку 1 с текстом
+        button1.setActionCommand("Button 1 was pressed"); //определяем действие при нажатии
+        panel.add(button1); //добавляем кнопку на панель
+
 
         button2 = new JButton("Button 2");
         button2.setActionCommand("Button 2 was pressed");
@@ -41,18 +42,18 @@ public class TestFrame extends JFrame{
         button3.setActionCommand("Button 3 was pressed");
         panel.add(button3);
 
-        textField = new JTextField();
-        textField.setColumns(23);
-        panel.add(textField);
+        textField = new JTextField();  //объект для текствого поля
+        textField.setColumns(23);  //определяем размерность текстового поля
+        panel.add(textField);  //добавляем текстовое поле на панель
 
-        ActionListener actionListener = new TestActionListener();
+        ActionListener actionListener = new TestActionListener(); //объект для выполнения действия с кнопками
 
         button1.addActionListener(actionListener);
-        button2.addActionListener(actionListener);
+        button2.addActionListener(actionListener); //добавление кнопок на действие
         button3.addActionListener(actionListener);
 
-        getContentPane().add(panel);
-        setPreferredSize(new Dimension(320, 100));
+        getContentPane().add(panel);  //добавление панели в приложение
+        setPreferredSize(new Dimension(320, 100));  //определяем размер окна
     }
 
     //Метод инициализирует графический интерфейс, создавая панель, на которой размещаются три кнопки и текстовое поле, тут устанавливается действие при нажатии на кнопки
@@ -60,6 +61,7 @@ public class TestFrame extends JFrame{
     public class TestActionListener implements  ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+            //Класс TestActionListener реализует интерфейс ActionListener и обрабатывает события при нажатии на кнопки. В зависимости от нажатой кнопки происходит определенное действие
             JButton button = (JButton) e.getSource();
             System.out.println(button.getText() + ", " + e.getActionCommand());
 
@@ -75,8 +77,8 @@ public class TestFrame extends JFrame{
         }
     }
 
-    //Класс TestActionListener реализует интерфейс ActionListener и обрабатывает события при нажатии на кнопки. В зависимости от нажатой кнопки происходит определенное действие
 
+    //запуск
     public static void main(String[] args){
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             @Override
